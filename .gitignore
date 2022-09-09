@@ -1,0 +1,9 @@
+# Venv
+env/
+
+# Database
+*.sqlite3
+
+# Environment Variables
+.env
+
