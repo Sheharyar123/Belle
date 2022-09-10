@@ -63,14 +63,19 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_LOGOUT_REDIRECT_URL = ''
-LOGIN_REDIRECT_URL = ''
+ACCOUNT_LOGOUT_REDIRECT_URL = 'base:index'
+LOGIN_REDIRECT_URL = 'base:index'
 ACCOUNT_SESSION_REMEMBER = True
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+
 
 SITE_ID = 1
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+
+ACCOUNT_FORMS = {
+    'signup': 'users.forms.CustomSignUpForm',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
