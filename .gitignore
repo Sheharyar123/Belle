@@ -7,3 +7,9 @@ env/
 # Environment Variables
 .env
 
+# Media 
+media/
+
+__pycache__
+*.pyc
+
